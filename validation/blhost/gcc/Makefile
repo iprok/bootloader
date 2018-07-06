@@ -199,7 +199,7 @@ $(MAKE_TARGET): $(OBJECTS_ALL)
 	@$(call printmessage,link,Linking, $(APP_NAME))
 	$(at)$(LD) $(LDFLAGS) \
           $(OBJECTS_ALL) \
-          -static -lc -lstdc++ -lm -ludev \
+          -static -lc -lstdc++ -lm -ludev -lrt \
           -o $@
 	@echo "Output binary:" ; echo "  $(APP_NAME)"
 
